@@ -30,3 +30,27 @@ vector<int> Solution::twoSum(vector<int>& nums, int target) {
 	}
 	return ans;
 }
+
+
+解法2： Hash表查找
+
+
+class Solution {
+public:
+	vector<int> twoSum(vector<int>& nums, int target);
+};
+
+vector<int> Solution::twoSum(vector<int>& nums, int target) {
+    unordered_map<int,int> record;
+    vector<int> ans;
+    for(int i=0; i<nums.size();i++){
+        int complement=target-nums[i];
+        if(record.find(complement)!=record.end()){
+            ans.push_back(i);
+            ans.push_back(record[complement]);
+            break;
+        }
+        record[nums[i]]=i;
+    } 
+    return ans;
+};
