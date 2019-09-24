@@ -1,2 +1,1 @@
-# LeetCode
-Record my path of LeetCode
+每日三题，坚持三个月不断，加油
